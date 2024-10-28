@@ -1,55 +1,41 @@
--cmd install module.exports = {
+module.exports = {
+        config: {
+                name: "up",
+                aliases: ["up"],
+                role: 0,
+                shortDescription: {
+                        en: "Show server uptime",
+                        tl: "Ipakita ang uptime ng server",
+                },
+                longDescription: {
+                        en: "Shows the duration for which the server has been running",
+                        tl: "Ipapakita ang tagal na gumagana ang server",
+                },
+                category: "goatBot",
+                guide: {
+                        en: "{p}uptime",
+                        tl: "{p}uptime",
+                },
+        },
 
-config: {
+        onStart: async function ({ api, message, threadsData }) {
+                const os = require("os");
+                const uptime = os.uptime();
 
-name: "up",
+                const days = Math.floor(uptime / (3600 * 24));
+                const hours = Math.floor((uptime % (3600 * 24)) / 3600);
+                const mins = Math.floor((uptime % 3600) / 60);
+                const seconds = Math.floor(uptime % 60);
 
-aliases: ["up", "upt"],
+                const system = `OS: ${os.platform()} ${os.release()}`;
+                const cores = `Cores: ${os.cpus().length}`;
+                const arch = `Architecture: ${os.arch()}`;
+                const totalMemory = `Total Memory: ${Math.round(os.totalmem() / (1024 * 1024 * 1024))} GB`;
+                const freeMemory = `Free Memory: ${Math.round(os.freemem() / (1024 * 1024 * 1024))} GB`;
+                const uptimeString = `Uptime: ${days} days, ${hours} hours, ${mins} minutes, and ${seconds} seconds`;
 
-version: "1.0",
+                const response = `🕒 ${uptimeString}\n📡 ${system}\n🛡 ${cores}\n⚔ No AI Status\n📈 Total Users: ${threadsData.size}\n📉 Total Threads: ${threadsData.size}\n⚖ AI Usage: 0.0\n📊 RAM Usage: ${Math.round(process.memoryUsage().rss / (1024 * 1024))} MB\n💰 Total(RAM): ${Math.round(os.totalmem() / (1024 * 1024 * 1024))} GB\n💸 Current(RAM): ${Math.round(os.freemem() / (1024 * 1024 * 1024))} GB\n🛫 Ping: 15 ms\n🕰 Uptime(Seconds): ${Math.floor(process.uptime())}`;
 
-author: "NiSaN",
-
-role: 0,
-
-shortDescription: {
-
-en: "Displays the uptime of the bot."
-
-},
-
-longDescription: {
-
-en: "Displays the amount of time that the bot has been running for."
-
-},
-
-category: "System",
-
-guide: {
-
-en: "Use {p}uptime to display the uptime of the bot."
-
-}
-
-},
-
-onStart: async function ({ api, event, args }) {
-
-const uptime = process.uptime();
-
-const seconds = Math.floor(uptime % 60);
-
-const minutes = Math.floor((uptime / 60) % 60);
-
-const hours = Math.floor((uptime / (60 * 60)) % 24);
-
-const days = Math.floor(uptime / (60 * 60 * 24));
-
-const uptimeString = `╭──Junayed AI ☔︎𝚄𝙿𝚃𝚒𝚖𝚎⏳👈\n├⏳ 𝙷𝙾𝚄𝚁𝚂 ${hours}\n├⏰ 𝙼𝙸𝙽𝚄𝚃𝙴𝚂 ${minutes}\n├⏲️ 𝚂𝙴𝙲𝙾𝙽𝙳𝚂 ${seconds}\n╰───────────✰`;
-
-api.sendMessage(`${uptimeString}`, event.threadID);
-
-}
-
-} Up.js
+                message.reply(response);
+        },
+};
