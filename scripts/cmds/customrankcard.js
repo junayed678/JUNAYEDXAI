@@ -6,7 +6,7 @@ const { uploadImgbb } = global.utils;
 module.exports = {
 	config: {
 		name: "customrankcard",
-		aliases: ["crc", "customrank"],
+		aliases: ["crc2", "customrank"],
 		version: "1.12",
 		author: "NTKhang",
 		countDown: 5,
