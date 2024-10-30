@@ -1,4 +1,4 @@
--cmd const { GoatWrapper } = require('fca-liane-utils');
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path'); 
