@@ -124,4 +124,4 @@ module.exports = {
 
 	}
 
-}; info.js
+};
