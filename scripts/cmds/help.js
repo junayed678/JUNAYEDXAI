@@ -104,9 +104,9 @@ msg += `\n\n╭─────❃[𝙴𝙽𝙹𝙾𝚈]\n│>𝚃𝙾𝚃𝙰�
 
 msg += ``; 
 
-msg += `\n╭─────❃\n│🌟 | [𝙶𝙾𝙰𝚃𝙱𝙾𝚃🐐│https://www.facebook.com/profile.php?id=/mdyeasin.Arafat.Junayed\n╰────────────✦`; 
+msg += `\n╭─────❃\n│🌟 | [𝙶𝙾𝙰𝚃𝙱𝙾𝚃🐐│https://www.facebook.com/profile.php?id=/mdyeasin Arafat Junayed\n╰────────────✦`; 
 
-const attachment = await axios.get("https://i.imgur.com/49A0LZi.mp4", { responseType: "stream" }); 
+const attachment = await axios.get("https://i.imgur.com/nCNr6Db.gif",{ responseType: "stream" }); 
 
 await message.reply({ 
 
@@ -206,4 +206,4 @@ return "Unknown role";
 
 } 
 
-}
+  }
