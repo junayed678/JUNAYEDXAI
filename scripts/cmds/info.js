@@ -4,79 +4,79 @@ const moment = require('moment-timezone');
 
 module.exports = {
 
-	config: {
+        config: {
 
-		name: "info",
+                name: "info",
 
-		version: "1.0",
+                version: "1.0",
 
-		author: "NTKhang",
+                author: "NTKhang",
 
-		countDown: 20,
+                countDown: 20,
 
-		role: 0,
+                role: 0,
 
-		shortDescription: { vi: "", en: "" },
+                shortDescription: { vi: "", en: "" },
 
-		longDescription: { vi: "", en: "" },
+                longDescription: { vi: "", en: "" },
 
-		category: "owner",
+                category: "owner",
 
-		guide: { en: "" },
+                guide: { en: "" },
 
-		envConfig: {}
+                envConfig: {}
 
-	},
+        },
 
-	onStart: async function ({ message }) {
+        onStart: async function ({ message }) {
 
-		const authorName = " ♡ JUNAYED♡ ";
+                const authorName = " ♡ JUNAYED♡ ";
 
-		const ownAge = "『 20 』";
+                const ownAge = "『 20 』";
 
-		const messenger = "https://m.me/Mdyeasin.Arafat.Junayed";
+                const messenger = "https://m.me/Mdyeasin.Arafat.Junayed";
 
-		const authorFB = "https://www.facebook.com/Mdyeasin.Arafat.Junayed";
+                const authorFB = "https://www.facebook.com/Mdyeasin.Arafat.Junayed";
 
-		const authorNumber = "_01845546501";
+                const authorNumber = "_01845546501";
 
-		const Status = "_𝘚𝘪𝘯𝘨𝘭𝘦 𝘗𝘳𝘰 𝘔𝘢𝘹 ⛱";
+                const Status = "_𝘚𝘪𝘯𝘨𝘭𝘦 𝘗𝘳𝘰 𝘔𝘢𝘹 ⛱";
 
-		const urls = [
+                const urls = [
 
 "https://i.imgur.com/tfzAyv1.jpeg",
 
-"",
+"https://i.imgur.com/nCNr6Db.gif",
 
 "https://i.imgur.com/KfNJjFH.jpeg",
 
-""
+"https://i.imgur.com/NEG82zq.gif"
 
 ];
 
-		const link = urls[Math.floor(Math.random() * urls.length)];
+                const link = urls[Math.floor(Math.random() * urls.length)];
 
-		const now = moment().tz('Asia/Jakarta');
+                const now = moment().tz('Asia/Jakarta');
 
-		const date = now.format('MMMM Do YYYY');
+                const date = now.format('MMMM Do YYYY');
 
-		const time = now.format('h:mm:ss A');
+                const time = now.format('h:mm:ss A');
 
-		const uptime = process.uptime();
+                const uptime = process.uptime();
 
-		const seconds = Math.floor(uptime % 60);
+                const seconds = Math.floor(uptime % 60);
 
-		const minutes = Math.floor((uptime / 60) % 60);
+                const minutes = Math.floor((uptime / 60) % 60);
 
-		const hours = Math.floor((uptime / (60 * 60)) % 24);
+                const hours = Math.floor((uptime / (60 * 60)) % 24);
 
-		const days = Math.floor(uptime / (60 * 60 * 24));
+                const days = Math.floor(uptime / (60 * 60 * 24));
 
-		const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+                const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-		message.reply({
+                message.reply({
 
-			body: `💫《 𝐁𝐨𝐭 𝐀𝐧𝐝 𝐎𝐰𝐧𝐞𝐫 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 》💫
+                        body: `💫《 𝐁𝐨𝐭 𝐀𝐧𝐝 𝐎𝐰𝐧𝐞𝐫 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 》💫
 
 \🤖彡𝐵𝑜𝑡 𝑁𝑎𝑚𝑒 : ${global.GoatBot.config.nickNameBot}
 
@@ -100,7 +100,7 @@ module.exports = {
 
 \📛彡𝐵𝑜𝑡 𝐼𝑠 𝑅𝑢𝑛𝑛𝑖𝑛𝑔 𝐹𝑜𝑟 : ${uptimeString}
 
-𝑻𝒈: https://t.me/nisan_editz
+𝑻𝒈: https://t.me/junayed69x
 
 𝑰𝒏𝒔𝒕𝒂: https://www.instagram.com/junayed69
 
@@ -108,20 +108,20 @@ module.exports = {
 
 \===============`,
 
-			attachment: await global.utils.getStreamFromURL(link)
+                        attachment: await global.utils.getStreamFromURL(link)
 
-		});
+                });
 
-	},
+        },
 
-	onChat: async function ({ event, message, getLang }) {
+        onChat: async function ({ event, message, getLang }) {
 
-		if (event.body && event.body.toLowerCase() === "info") {
+                if (event.body && event.body.toLowerCase() === "info") {
 
-			this.onStart({ message });
+                        this.onStart({ message });
 
-		}
+                }
 
-	}
+        }
 
 };
