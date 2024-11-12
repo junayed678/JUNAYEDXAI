@@ -5,7 +5,7 @@ module.exports = {
 		name: "waifu",
 		aliases: ["waifu, neko"],
 		version: "1.0",
-		author: "NISAN",
+		author: "JUNAYED",
 		countDown: 5,
 		role: 0,
 		shortDescription: "get random waifu",
@@ -26,7 +26,7 @@ module.exports = {
 				let img = res2.url
 
 				const form = {
-					body: `𝙽𝚒𝚂𝚊𝙽`
+					body: `JUNAYED`
 
 				};
 				if (img)
