@@ -47,7 +47,7 @@ module.exports = {
 				let img1 = res2.url
 
 				const form = {
-					body: `   「 𝙽𝙸𝚂𝙰𝙽 𝚁𝙰𝙽𝙳𝙾𝙼 𝚆𝙰𝙸𝙵𝚄 」   `
+					body: `   「 JUNAYED RANDOM WAIFU FOR YOU 」   `
 
 				};
 				if (img1)
