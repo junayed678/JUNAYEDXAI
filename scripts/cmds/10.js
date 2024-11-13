@@ -15,6 +15,6 @@ onChat: async function({
     message,
     getLang
 }) {
-    if (event.body && event.body.toLowerCase() == "🙂") return message.reply("Khamkir pola senti khas ken?");
+    if (event.body && event.body.toLowerCase() == "🙂") return message.reply("Babu Senti Khanu Keno🥰😘?");
 }
 }; 
