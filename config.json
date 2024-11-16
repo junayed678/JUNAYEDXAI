@@ -37,19 +37,19 @@
   "adminBot": [
     "100076343334427",
     "61550331299185",
-    ""
+    "61552753090872"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "TID_UID",
+      "26564074959906025",
       "",
       ""
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "Sunny Leon🎀💋",
-  "prefix": "/",
+  "prefix": "-",
   "xnil": "",
   "api": "",
   "api2": "",
