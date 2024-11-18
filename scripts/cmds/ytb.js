@@ -22,7 +22,7 @@ module.exports = {
     name: "ytb", 
     version: "1.0", 
     author: "Team Calyx", 
-    countDown: 50,
+    countDown: 04,
     role: 0,
     shortDescription: {
       en: "Download video or audio from YouTube."
